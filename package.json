@@ -1,16 +1,25 @@
 {
   "name": "project-1",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-scripts": "1.0.12"
-  },
+  "version": "1.0.0",
+  "description": "first project solo",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/molekewl/project-1.git"
+  },
+  "author": "John Wells",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/molekewl/project-1/issues"
+  },
+  "homepage": "https://github.com/molekewl/project-1#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.9"
   }
 }
