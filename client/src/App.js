@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import AudioEngine from './components/AudioContext';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         </div>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
+          <AudioEngine />
         </p>
       </div>
     );
