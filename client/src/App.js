@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import AudioEngine from './components/AudioEngine';
+import Keyboard from './components/Keyboard';
+import { connect } from 'react-redux';
 
 class App extends Component {
   render() {
@@ -13,11 +15,16 @@ class App extends Component {
         </div>
         <p className="App-intro">
           Make sure to turn DOWN <code>Your Speakers!!</code> before playing.
-          <AudioEngine />
         </p>
+        <AudioEngine />
+        <Keyboard />
       </div>
     );
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  return state;
+}
+
+export default connect(mapStateToProps)(App);
