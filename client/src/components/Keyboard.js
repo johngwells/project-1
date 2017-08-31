@@ -29,23 +29,29 @@ class Keyboard extends Component {
   }
 
   mouseDown(key) {
-    this.props.dispatch({
+    return {
       type: 'NOTE_ON',
       key
-    });
+    };
   }
   
   mouseUp(key) {
-    this.props.dispatch({
+    return {
       type: 'NOTE_OFF',
       key
-    });
+    };
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    actions: state.mouseDown
+  };
+};
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ mouseDown: mouseDown, mouseUp: mouseUp }, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(Keyboard);
+export default connect(mapStateToProps, mapDispatchToProps)(Keyboard);
 // export default Keyboard;
