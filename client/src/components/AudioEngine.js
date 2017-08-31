@@ -32,7 +32,7 @@ class AudioEngine extends Component {
     switch(event.type) {
       case "NOTE_ON":
         // Execute note on
-        var osc = this.audioContext.createOscillator();
+        let osc = this.audioContext.createOscillator();
         osc.frequency.value = this.noteNumberToFrequency(event.key);
         osc.start(this.audioContext.currentTime);
         osc.type = 'square';
