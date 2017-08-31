@@ -62,10 +62,10 @@ class AudioEngine extends Component {
   }
 }
 
-// const ConnectedSynthEngine = connect((store) => {
-//   return {
-//     events: store.get('events').toJS()
-//   };
-// })(AudioEngine);
+const mapStateToProps = (state) => {
+  return {
+    events: 'events'
+  }
+}
 
-export default AudioEngine;
+export default connect(mapStateToProps)(AudioEngine);
