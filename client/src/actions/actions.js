@@ -1,4 +1,4 @@
-export const mouseDown = key => {
+export const mouseDown = (key) => {
   return {
     type: 'NOTE_ON',
     key

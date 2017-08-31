@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import mouseDown from '../actions/actions';
+import { mouseDown, mouseUp } from '../actions/actions';
+import { bindActionCreators } from 'redux';
 
 const keyList = [
   { number: 48, label: 'J' },
@@ -43,11 +44,7 @@ class Keyboard extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return {
-    onMouseDown: (data) => {
-      dispatch(mouseDown(data));
-    }
-  }
+  return bindActionCreators({ mouseDown: mouseDown, mouseUp: mouseUp }, dispatch);
 }
 
 export default connect(null, mapDispatchToProps)(Keyboard);
